@@ -451,7 +451,7 @@ module.exports = (server) => {
             origin: process.env.FRONTEND_URL,
             credentials: true
         },
-    }).of("/socket");
+    });
 
     io.use((socket, next) => {
         const cookieHeader = socket.handshake.headers.cookie;
